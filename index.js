@@ -1,11 +1,13 @@
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 const fs = require('fs');
+const express = require('express'); // Import Express
 
 const BOT_TOKEN = '6878959816:AAEYkRBK5jBQ9HrRllEoMzI0dQBmKLSW3K8';
 const DATA_FILE = 'data.json';
 
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
+const app = express(); // Initialize Express
 
 let userData = {};
 if (fs.existsSync(DATA_FILE)) {
@@ -233,4 +235,13 @@ Here are the available commands:
 7. /help - Display this help message.
   `;
   bot.sendMessage(chatId, helpMessage);
+});
+
+// Start Express server
+const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+  res.send('Bot is running!');
+});
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
