@@ -1,27 +1,20 @@
 {
-  "name": "telegram-url-shortener-bot",
+  "name": "telegram-bot-with-express",
   "version": "1.0.0",
-  "description": "A Telegram bot that shortens URLs, manages headers and footers, and more.",
+  "description": "A Telegram bot with an integrated Express server.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "axios": "^1.5.0",
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
     "fs": "0.0.1-security",
     "node-telegram-bot-api": "^0.61.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/telegram-url-shortener-bot.git"
+  "engines": {
+    "node": ">=14.0.0"
   },
-  "keywords": [
-    "telegram",
-    "bot",
-    "url",
-    "shortener",
-    "nodejs"
-  ],
   "author": "Your Name",
-  "license": "ISC"
+  "license": "MIT"
 }
