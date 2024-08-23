@@ -3,7 +3,7 @@ const axios = require('axios');
 const fs = require('fs');
 const express = require('express'); // Import Express
 
-const BOT_TOKEN = '6878959816:AAEYkRBK5jBQ9HrRllEoMzI0dQBmKLSW3K8';
+const BOT_TOKEN = '7290121636:AAHOmvQNprbVDi-c7lqXeS9godtzPKk_mgY';
 const DATA_FILE = 'data.json';
 
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
